@@ -1,0 +1,40 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace fusion=Neos\Fusion\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+<ul class="article-menu">
+    <f:for each="{items}" as="item">
+        <li>
+            <div class="article-image">
+                <f:if condition="{item.node.properties.image}">
+                    <f:then>
+                        <neos:link.node node="{item.node}">
+                            <media:image image="{item.node.properties.image}" width="300" height="200" allowUpScaling="TRUE" allowCropping="TRUE" alt="{item.node.properties.articleTitle}" />
+                        </neos:link.node>
+                    </f:then>
+                    <f:else>
+                        <img src="{f:uri.resource(package: 'Neos.Neos', path: 'Images/dummy-image.png')}" title="Dummy image" alt="Dummy image" />
+                    </f:else>
+                </f:if>
+            </div>
+            <div class="article-description">
+                <neos:link.node node="{item.node}">
+                    <f:if condition="{item.node.properties.articleTitle}">
+                        <f:then>
+                            <h3>{item.node.properties.articleTitle}</h3>
+                        </f:then>
+                        <f:else>
+                            <h3>{item.label}</h3>
+                        </f:else>
+                    </f:if>
+                </neos:link.node>
+
+                <small class="articleno">{item.node.properties.articleNumber}</small>
+            </div>
+            <div class="article-price">
+                <f:if condition="{item.node.properties.articleOldPrice}"><span class="article-old-price">&euro; {item.node.properties.articleOldPrice}</span></f:if>
+                <f:if condition="{item.node.properties.articlePrice}"><span class="article-normal-price">&euro; {item.node.properties.articlePrice}</span></f:if>
+            </div>
+        </li>
+    </f:for>
+</ul>
+

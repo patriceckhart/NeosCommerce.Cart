@@ -1,0 +1,99 @@
+'NeosCommerce.Cart:ArticlePage':
+  superTypes:
+    'Neos.NodeTypes:Page': TRUE
+  ui:
+    label: 'Article page'
+    icon: 'icon-shopping-cart'
+    position: 2
+    inspector:
+      groups:
+        shop:
+          label: 'Shop'
+          icon: 'icon-shopping-cart'
+  childNodes:
+    'main':
+      type: 'Neos.Neos:ContentCollection'
+      constraints:
+        nodeTypes:
+          'NeosCommerce.Cart:Article': TRUE
+          '*': FALSE
+  properties:
+    'articleTitle':
+      type: string
+      ui:
+        label: 'Artikelbezeichnung'
+        defaultValue : 'Artikelbezeichnung'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shop'
+          position: 1
+    'articlePrice':
+      type: string
+      ui:
+        label: 'Preis'
+        defaultValue : 'Preis'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shop'
+          position: 2
+    'articleOldPrice':
+      type: string
+      ui:
+        label: 'Alter Preis'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shop'
+          position: 3
+    'articleNumber':
+      type: string
+      ui:
+        label: 'Artikelnummer'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shop'
+          position: 4
+    'tax':
+      type: string
+      ui:
+        label: 'Mehrwertsteuer (in Prozent)'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shop'
+          position: 5
+    'taxinclusive':
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: 'Preis inkl. Mehrwertsteuer'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shop'
+          position: 6
+    'stock':
+      type: boolean
+      defaultValue: TRUE
+      ui:
+        label: 'Artikel verfügbar'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shop'
+          position: 7
+    'image':
+      type: Neos\Media\Domain\Model\ImageInterface
+      ui:
+        label: 'Bild'
+        reloadIfChanged: TRUE
+        inspector:
+          group: 'shop'
+          position: 8
+          editorOptions:
+            features:
+              resize: TRUE
+    'assets':
+      type: array<Neos\Media\Domain\Model\Asset>
+      ui:
+        inspector:
+          group: 'shop'
+          position: 9
+        label: 'Fotos'
+        reloadIfChanged: TRUE

@@ -1,0 +1,22 @@
+'NeosCommerce.Cart:Article':
+  superTypes:
+    'Neos.Neos:Content': TRUE
+  ui:
+    label: 'Artikel'
+    icon: 'icon-shopping-cart'
+    group: 'shop'
+  properties:
+    'articleDescription':
+      type: string
+      ui:
+        label: 'Beschreibung'
+        defaultValue : 'Beschreibung'
+        inlineEditable: TRUE
+        aloha:
+          'table':
+            'table': true
+          'link':
+            'a': true
+          'list':
+            'ul': true
+            'ol': true

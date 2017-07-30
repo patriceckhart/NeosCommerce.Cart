@@ -1,0 +1,22 @@
+Neos:
+  Neos:
+    userInterface:
+      translation:
+        autoInclude:
+          NeosCommerce.Cart:
+            - Main
+            - 'NodeTypes/*'
+    nodeTypes:
+      groups:
+        shop:
+          position: 'end'
+          label: 'Shop'
+    fusion:
+      autoInclude:
+        NeosCommerce.Cart: true
+  Flow:
+    i18n:
+      defaultLocale: de
+NeosCommerce:
+  Cart:
+    linkToCart: '/warenkorb.html'

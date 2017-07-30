@@ -1,0 +1,1 @@
+prototype(Cart:ArticleMenu) < prototype(Neos.NodeTypes:Menu)

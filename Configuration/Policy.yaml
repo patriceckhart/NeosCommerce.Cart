@@ -1,0 +1,11 @@
+privilegeTargets:
+  Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    'NeosCommerce.Cart:CartControllerActions':
+      matcher: 'method(NeosCommerce\Cart\Controller\CartController->.*Action())'
+
+roles:
+  'Neos.Flow:Everybody':
+    privileges:
+      -
+        privilegeTarget: 'NeosCommerce.Cart:CartControllerActions'
+        permission: GRANT

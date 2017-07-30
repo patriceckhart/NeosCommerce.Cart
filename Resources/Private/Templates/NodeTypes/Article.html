@@ -1,0 +1,53 @@
+{namespace fusion=Neos\Fusion\ViewHelpers}
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace media=Neos\Media\ViewHelpers}
+<f:flashMessages class="flashmessages" />
+<div class="article">
+    <div class="col-left">
+        <div class="article-image">
+            <f:if condition="{image}">
+                <div class="article-big-image">
+                    <a href="{media:uri.image(image: image, maximumWidth:800, maximumHeight:600, allowCropping:FALSE)}" data-lightbox="roadtrip{node.identifier}">
+                        <media:image image="{image}" width="532" height="432" allowUpScaling="TRUE" alt="{articleTitle}" />
+                    </a>
+                </div>
+            </f:if>
+        </div>
+        <div class="article-assets">
+            <f:if condition="{assets}">
+                <ul>
+                    <f:for each="{assets}" as="asset">
+                        <li><a href="{media:uri.image(image: asset, maximumWidth:800, maximumHeight:600, allowCropping:FALSE)}" data-lightbox="roadtrip{node.identifier}"><media:image image="{asset}" width="100" height="100" allowCropping="TRUE" allowUpScaling="TRUE" alt="" /></a></li>
+                    </f:for>
+                </ul>
+            </f:if>
+        </div>
+    </div>
+    <div class="col-right">
+        <div class="article-title">
+            <f:if condition="{articleTitle}"><h1>{articleTitle}</h1></f:if>
+            <f:if condition="{articleNumber}"><small>Artikelnummer: {articleNumber}</small></f:if>
+        </div>
+        <div class="article-price">
+            <f:if condition="{articleOldPrice}"><span class="article-old-price">&euro; {articleOldPrice}</span></f:if>
+            <f:if condition="{articlePrice}"><span class="article-normal-price">&euro; {articlePrice}</span></f:if>
+            <f:if condition="{taxinclusive}==true">
+                <f:then>
+                    <small class="tax">inkl. {tax} % MwSt.</small>
+                </f:then>
+                <f:else>
+                    <div class="tax">
+                        <small class="tax">exkl. {tax} % MwSt.</small>
+                    </div>
+                </f:else>
+            </f:if>
+        </div>
+        <div class="article-description">
+            {neos:contentElement.editable(property: 'articleDescription')}
+
+
+        </div>
+
+    </div>
+</div>
+

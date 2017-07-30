@@ -1,0 +1,6 @@
+prototype(Cart:MiniCart) < prototype(Neos.Neos:Plugin)
+prototype(Cart:MiniCart) {
+    package = 'NeosCommerce.Cart'
+    controller = 'Cart'
+    action = 'miniCart'
+}

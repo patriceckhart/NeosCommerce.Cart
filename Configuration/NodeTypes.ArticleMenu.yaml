@@ -1,0 +1,7 @@
+'NeosCommerce.Cart:ArticleMenu':
+  superTypes:
+    'Neos.NodeTypes:Menu': TRUE
+  ui:
+    label: 'Article menu'
+    group: 'shop'
+    icon: 'icon-sitemap'
