@@ -7,11 +7,17 @@ namespace NeosCommerce\Cart\Controller;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Mvc\Controller\ActionController;
+
 /**
  * @Flow\Scope("session")
  */
 class CartController extends ActionController
 {
+
+    /**
+     * @var array
+     */
+    protected $items = array();
 
     /**
      * @var array
@@ -25,11 +31,6 @@ class CartController extends ActionController
     public function injectSettings(array $settings) {
         $this->settings = $settings;
     }
-
-    /**
-     * @var array
-     */
-    protected $items = array();
 
     /**
      * @param array $item
@@ -58,7 +59,6 @@ class CartController extends ActionController
                 $sum += $quantity;
             }
             //return $this->view->render("../Cart/MiniCart").$wrap1.'Zum Warenkorb ('.$sum.' Artikel). <a href="/cart/deleteCart">Warenkorb löschen</a>'.$wrap2$sum = '0';
-            $sum = $sum;
         } else {
             //return $this->view->render("../Cart/MiniCart").$wrap1.'Ihr Warenkorb ist leer.'.$wrap2;
             $sum = '0';
@@ -66,6 +66,7 @@ class CartController extends ActionController
         $this->view->assign('result', $sum);
         //return $this->view->render("../Cart/MiniCart");
     }
+
 
     /**
      * @return void

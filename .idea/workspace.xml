@@ -27,8 +27,8 @@
       <file leaf-file-name="CartController.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="408">
-              <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+            <state relative-caret-position="690">
+              <caret line="46" column="7" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
               <folding>
                 <element signature="e#110#144#0#PHP" expanded="true" />
               </folding>
@@ -59,7 +59,6 @@
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/Root.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/ArticleMenu.fusion" />
         <option value="$PROJECT_DIR$/Configuration/Caches.yaml" />
-        <option value="$PROJECT_DIR$/Classes/Domain/Repository/CartRepository.php" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/MiniCart.fusion" />
@@ -71,6 +70,7 @@
         <option value="$PROJECT_DIR$/Configuration/Policy.yaml" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Repository/CartRepository.php" />
         <option value="$PROJECT_DIR$/Classes/Controller/CartController.php" />
       </list>
     </option>
@@ -83,7 +83,6 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-1" />
     <option name="y" value="23" />
     <option name="width" value="2560" />
     <option name="height" value="1344" />
@@ -491,18 +490,21 @@
       <workItem from="1501488179745" duration="445000" />
       <workItem from="1501488985978" duration="3232000" />
       <workItem from="1501492775211" duration="586000" />
+      <workItem from="1501497595722" duration="25000" />
+      <workItem from="1501501761328" duration="69000" />
+      <workItem from="1501502178636" duration="1997000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="15790000" />
+    <option name="totallyTimeSpent" value="17881000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="23" width="2560" height="1344" extended-state="6" />
+    <frame x="0" y="23" width="2560" height="1344" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.1938046" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16163622" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16521049" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3290735" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -556,6 +558,16 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#110#144#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
@@ -578,7 +590,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/Caches.yaml" />
-    <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/CartRepository.php" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Index.html" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Locale/Translations/de/Main.xlf" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Locale/Translations/en/Main.xlf" />
@@ -696,18 +707,26 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Repository/CartRepository.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="25" column="29" lean-forward="true" selection-start-line="25" selection-start-column="29" selection-end-line="25" selection-end-column="29" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
-          <caret line="0" column="8" lean-forward="true" selection-start-line="0" selection-start-column="8" selection-end-line="0" selection-end-column="8" />
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="35" column="19" lean-forward="true" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
+        <state relative-caret-position="690">
+          <caret line="46" column="7" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="46" selection-end-column="7" />
           <folding>
             <element signature="e#110#144#0#PHP" expanded="true" />
           </folding>
