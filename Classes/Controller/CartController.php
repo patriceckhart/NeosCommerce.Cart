@@ -47,8 +47,9 @@ class CartController extends ActionController
     public function miniCartAction() {
         $cart = $this->items;
         $cartcount = count($cart);
-        /*$wrap1 = '<div class="cart-minicart">';
-        $wrap2 = '</div>';*/
+        $wrap1 = '<div class="cart-minicart">';
+        $wrap2 = '</div>';
+
         if ($cartcount>0) {
             $sum = FALSE;
             $sum = intval($sum);
@@ -56,12 +57,14 @@ class CartController extends ActionController
                 $quantity = intval($dat["quantity"]);
                 $sum += $quantity;
             }
-            //return $wrap1.'Zum Warenkorb ('.$sum.' Artikel). <a href="/cart/deleteCart">Warenkorb löschen</a>'.$wrap2;
+            //return $this->view->render("../Cart/MiniCart").$wrap1.'Zum Warenkorb ('.$sum.' Artikel). <a href="/cart/deleteCart">Warenkorb löschen</a>'.$wrap2$sum = '0';
+            $sum = $sum;
         } else {
-            //return $wrap1.'Ihr Warenkorb ist leer.'.$wrap2;
+            //return $this->view->render("../Cart/MiniCart").$wrap1.'Ihr Warenkorb ist leer.'.$wrap2;
             $sum = '0';
         }
         $this->view->assign('result', $sum);
+        //return $this->view->render("../Cart/MiniCart");
     }
 
     /**
