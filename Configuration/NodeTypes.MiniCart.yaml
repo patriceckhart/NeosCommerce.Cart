@@ -5,9 +5,3 @@
     label: "Mini Warenkorb"
     group: 'shop'
     icon: 'icon-shopping-cart'
-  options:
-    'pluginViews':
-      'miniCart':
-        label: 'Mini Warenkorb'
-        controllerActions:
-          'NeosCommerce\Cart\Controller\CartController': ['miniCart']

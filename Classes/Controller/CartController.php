@@ -7,12 +7,24 @@ namespace NeosCommerce\Cart\Controller;
 
 use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Mvc\Controller\ActionController;
-
 /**
  * @Flow\Scope("session")
  */
 class CartController extends ActionController
 {
+
+    /**
+     * @var array
+     */
+    protected $settings;
+
+    /**
+     * @param array $settings
+     * @return void
+     */
+    public function injectSettings(array $settings) {
+        $this->settings = $settings;
+    }
 
     /**
      * @var array
@@ -35,6 +47,8 @@ class CartController extends ActionController
     public function miniCartAction() {
         $cart = $this->items;
         $cartcount = count($cart);
+        /*$wrap1 = '<div class="cart-minicart">';
+        $wrap2 = '</div>';*/
         if ($cartcount>0) {
             $sum = FALSE;
             $sum = intval($sum);
@@ -42,10 +56,24 @@ class CartController extends ActionController
                 $quantity = intval($dat["quantity"]);
                 $sum += $quantity;
             }
-            $this->view->assign('itemscount', $sum);
+            //return $wrap1.'Zum Warenkorb ('.$sum.' Artikel). <a href="/cart/deleteCart">Warenkorb löschen</a>'.$wrap2;
         } else {
-            $this->view->assign('itemscount', '0');
+            //return $wrap1.'Ihr Warenkorb ist leer.'.$wrap2;
+            $sum = '0';
         }
+        $this->view->assign('result', $sum);
+    }
+
+    /**
+     * @return void
+     */
+    public function deleteCartAction() {
+        $cart = $this->items;
+        $cartcount = count($cart);
+        for ($i = 0; $i < $cartcount; $i++) {
+            unset($this->items[$i]);
+        }
+        $this->redirectToUri('/');
     }
 
 }
