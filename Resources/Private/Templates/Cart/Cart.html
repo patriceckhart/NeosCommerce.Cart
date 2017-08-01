@@ -24,7 +24,7 @@
                                 <f:format.crop maxCharacters="140"><f:format.stripTags>{item.articleDescription}</f:format.stripTags></f:format.crop>
                             </div>
                             <f:form action="updateItem" controller="Cart" package="NeosCommerce.Cart">
-                                <div class="cartContentInner10 textRight sub">{item.price} &euro;<br /><small>inkl. {item.tax}% MwSt.</small></div>
+                                <div class="cartContentInner10 textRight sub">{item.articlePrice} &euro;<br /><small>inkl. {item.tax}% MwSt.</small></div>
                                 <div class="cartContentInner10 textCenter quantinner"><f:form.textfield name="quantity" class="inputquant input" type="number" additionalAttributes="{pattern: '\d*'}" style="text-align:center;" value="{item.quantity}" /></div>
                                 <div class="cartContentInner10 textRight">{item.fullprice} &euro;<br /><small>inkl. {item.tax}% MwSt.</small></div>
                                 <div class="cartContentInner10 textRight">
@@ -33,14 +33,14 @@
                                     <f:form.hidden name="title" value="{item.articleTitle}" />
                                     <f:form.hidden name="description" value="<f:format.stripTags>{item.description}</f:format.stripTags>" />
                                     <f:form.hidden name="price" value="{item.price}" />
-                                    <f:form.hidden name="articlenumber" value="{item.articlenumber}" />
+                                    <f:form.hidden name="articlenumber" value="{item.articleNumber}" />
                                     <f:form.hidden name="timestamp" value="{item.timestamp}" />
                                     <f:form.hidden name="tax" value="{item.tax}" />
                                     <f:form.hidden name="taxinclusive" value="{item.taxinclusive}" />
                                     <f:form.hidden name="taxvalue" value="{item.taxvalue}" />
                                     <button type="submit"><i class="fa fa-refresh" aria-hidden="true"></i></button>
                             </f:form>
-                            <f:link.action action="removeItem" controller="cart" arguments="{id: item.timestamp}"><i class="fa fa-trash-o" aria-hidden="true"></i></f:link.action>
+                            <f:link.action action="removeItem" controller="cart" arguments="{id: item.timestamp}">Löschen <i class="fa fa-trash-o" aria-hidden="true"></i></f:link.action>
                         </div>
                     </div>
     </div>
