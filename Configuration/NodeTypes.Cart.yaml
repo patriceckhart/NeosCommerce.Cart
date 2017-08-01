@@ -1,0 +1,7 @@
+'NeosCommerce.Cart:Cart':
+  superTypes:
+    'Neos.Neos:Plugin': TRUE
+  ui:
+    label: "Warenkorb"
+    group: 'shop'
+    icon: 'icon-shopping-cart'
