@@ -38,6 +38,7 @@ class CartController extends ActionController
      * @Flow\Session(autoStart = TRUE)
      */
     public function addItemAction($item) {
+        $item['timestamp'] = time();
         $this->items[] = $item;
         $this->redirectToUri('/');
     }
