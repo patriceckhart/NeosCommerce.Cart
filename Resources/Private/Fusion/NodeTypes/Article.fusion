@@ -3,11 +3,12 @@ prototype(Cart:Article) {
     articlePrice = ${q(documentNode).property('articlePrice')}
     articleOldPrice = ${q(documentNode).property('articleOldPrice')}
     articleNumber = ${q(documentNode).property('articleNumber')}
-    taxinclusive = ${q(documentNode).property('taxinclusive')}
     tax = ${q(documentNode).property('tax')}
     stock = ${q(documentNode).property('stock')}
     image = ${q(documentNode).property('image')}
     assets = ${q(documentNode).property('assets')}
+
+    #taxinclusive = ${Configuration.setting('NeosCommece.Cart.taxinclusive')}
     @cache {
         mode = 'uncached'
         context {

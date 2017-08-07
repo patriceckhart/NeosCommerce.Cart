@@ -2,7 +2,7 @@
 {namespace neos=Neos\Neos\ViewHelpers}
 {namespace media=Neos\Media\ViewHelpers}
 <f:flashMessages class="flashmessages" />
-<div class="article">
+<div class="article">{taxinclusive}
     <div class="col-left">
         <div class="article-image">
             <f:if condition="{image}">
@@ -31,7 +31,7 @@
         <div class="article-price">
             <f:if condition="{articleOldPrice}"><span class="article-old-price">&euro; {articleOldPrice}</span></f:if>
             <f:if condition="{articlePrice}"><span class="article-normal-price">&euro; {articlePrice}</span></f:if>
-            Settings: {settings.test}
+
             <f:if condition="{taxinclusive}==true">
                 <f:then>
                     <small class="tax">{f:translate(id: 'inclusive', package: 'NeosCommerce.Cart', source: 'NodeTypes/Article')} {tax} % {f:translate(id: 'tax', package: 'NeosCommerce.Cart', source: 'NodeTypes/Article')}</small>
