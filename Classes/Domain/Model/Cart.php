@@ -24,17 +24,22 @@ class Cart {
      * @Flow\Session(autoStart = TRUE)
      */
     public function addItem($item) {
-        /*$key = array_search($item['articleNumber'], array_column($this->items, 'articleNumber'));
-        $quantity = $item['quantity'];
+        $cart = $this->items;
+        $quantity = intval($item['quantity']);
+        $key = array_search($item['articleNumber'], array_column($cart, 'articleNumber'));
         if ($key!==FALSE) {
-            $quantitycheck = $this->items[$key]["quantity"];
+            $quantitycheck = intval($cart[$key]['quantity']);
             if ($quantitycheck>0) {
-                $item['quantity'] = $quantitycheck+$quantity;
+                $quantity = intval($quantitycheck+$quantity);
+                $item['quantity'] = $quantity;
+                $item['timestamp'] = time();
+                $this->items[$key] = $item;
             }
-        }*/
-
-        $item['timestamp'] = time();
-        $this->items[] = $item;
+        } else {
+            $item['quantity'] = $quantity;
+            $item['timestamp'] = time();
+            $this->items[] = $item;
+        }
     }
 
     /**
