@@ -76,9 +76,42 @@ class CartController extends ActionController
      */
     public function cartAction() {
         $items = $this->cart->cart();
+
         $taxinclusive = $this->settings['taxinclusive'];
         $this->view->assign('taxinclusive', $taxinclusive);
+
+        $cartcount = count($items);
+        if ($cartcount>0) {
+            $sumExcl = FALSE;
+            $sumExcl = floatval($sumExcl);
+            foreach ($items as $dat) {
+                $fullpriceExcl = floatval($dat["fullprice"]);
+                $sumExcl += $fullpriceExcl;
+            }
+            $this->view->assign('subtotal', $sumExcl);
+        } else {
+            $sumExcl = 0;
+        }
+
+        $sumTax = FALSE;
+        $sumTax = floatval($sumTax);
+        foreach ($items as $datTax) {
+            $tax = floatval($datTax["taxvalue"]);
+            $sumTax += $tax;
+        }
+
+        $taxinclusive = $this->settings['taxinclusive'];
+
+        if($taxinclusive==true) {
+            $this->view->assign('fullprice', $sumExcl);
+        } else {
+            $this->view->assign('fullprice', 'non');
+        }
+
+        $this->view->assign('taxvalue', $sumTax);
+
         $this->view->assign('items', $items);
+
     }
 
     /**

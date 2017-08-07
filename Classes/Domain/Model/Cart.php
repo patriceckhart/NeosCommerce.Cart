@@ -44,6 +44,10 @@ class Cart {
         $item['fullprice'] = floatval($fullprice);
         $item['articlePrice'] = floatval($price);
 
+        $tax = intval($item['tax']);
+        $taxvalue = floatval($price)/100*$tax;
+        $item['taxvalue'] = $taxvalue*$quantity;
+
         if ($key!==FALSE) {
             $this->items[$key] = $item;
         } else {
@@ -70,6 +74,10 @@ class Cart {
         $fullprice = $price*$quantity;
         $item['fullprice'] = floatval($fullprice);
         $item['articlePrice'] = floatval($price);
+
+        $tax = intval($item['tax']);
+        $taxvalue = floatval($price)/100*$tax;
+        $item['taxvalue'] = $taxvalue*$quantity;
 
         $this->items[$key] = $item;
 

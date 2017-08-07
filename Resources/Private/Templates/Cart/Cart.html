@@ -29,15 +29,13 @@
                                 <div class="cartContentInner10 textRight"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.fullprice}</f:format.currency> <br /><small><f:if condition="{taxinclusive}==true"><f:then>inkl.</f:then><f:else>exkl.</f:else></f:if> {item.tax}% MwSt.</small></div>
                                 <div class="cartContentInner20 textRight">
 
-
                                     <f:form.hidden property="image" value="{item.image}" />
                                     <f:form.hidden property="articleTitle" value="{item.articleTitle}" />
                                     <f:form.hidden property="articleDescription" value="<f:format.stripTags>{item.articleDescription}</f:format.stripTags>" />
                                     <f:form.hidden property="articlePrice" value="{item.articlePrice}" />
                                     <f:form.hidden property="tax" value="{item.tax}" />
+                                    <f:form.hidden property="taxvalue" value="{item.taxvalue}" />
                                     <f:form.hidden property="articleNumber" value="{item.articleNumber}" />
-
-
 
                                     <button type="submit">Aktualisieren</button>
                             </f:form>
@@ -55,9 +53,9 @@
 
     <div class="summary">
         <div class="summaryInner">
-            <span class="summaryPrice">Zwischensumme: <strong>{subtotal} &euro;</strong></span><br />
-            <span class="summaryPrice">Mehrwertsteuer: <strong>{taxvalue} &euro;</strong></span><br />
-            <span class="summaryPrice total">Gesamtsumme: <strong>{fullprice} &euro;</strong></span><br />
+            <span class="summaryPrice">Zwischensumme: <strong><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{subtotal}</f:format.currency></strong></span><br />
+            <span class="summaryPrice">Mehrwertsteuer: <strong><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{taxvalue}</f:format.currency></strong></span><br />
+            <span class="summaryPrice total">Gesamtsumme: <strong><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{fullprice}</f:format.currency></strong></span><br />
 
 
             <f:form id="cartform" action="checkout" controller="Cart" package="NeosCommerce.Cart">
