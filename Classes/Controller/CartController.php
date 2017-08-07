@@ -21,6 +21,12 @@ class CartController extends ActionController
     protected $cart;
 
     /**
+     * @Flow\Inject
+     * @var \Neos\Flow\I18n\Translator
+     */
+    protected $translator;
+
+    /**
      * @var array
      */
     protected $settings;
@@ -40,6 +46,8 @@ class CartController extends ActionController
     public function addItemAction($item) {
         $this->cart->addItem($item);
         $nodeUri = $item['nodeUri'];
+        //$this->addFlashMessage($this->translator->translateById('added', $sourceName = 'NodeTypes/Article', $packageKey = 'NeosCommerce.Cart'));
+        $this->addFlashMessage("Artikel hinzugefügt.");
         $this->redirectToUri($nodeUri);
     }
 
@@ -56,8 +64,25 @@ class CartController extends ActionController
     /**
      * @return void
      */
+    public function cartAction() {
+        $items = $this->cart->cart();
+        $this->view->assign('items', $items);
+    }
+
+    /**
+     * @return void
+     */
     public function deleteCartAction() {
         $this->cart->deleteCart();
+        $this->redirectToUri('/');
+    }
+
+    /**
+     * @param string $id
+     * @return void
+     */
+    public function removeItemAction($id) {
+        $this->cart->removeItem($id);
         $this->redirectToUri('/');
     }
 

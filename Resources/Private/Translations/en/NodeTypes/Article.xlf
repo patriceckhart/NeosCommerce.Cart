@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="NeosCommerce.Cart" source-language="en" datatype="plaintext">
+		<body>
+            <trans-unit id="articleNumber" xml:space="preserve">
+                <source>Articlenumber</source>
+            </trans-unit>
+            <trans-unit id="inclusive" xml:space="preserve">
+                <source>incl.</source>
+            </trans-unit>
+            <trans-unit id="exclusive" xml:space="preserve">
+                <source>excl.</source>
+            </trans-unit>
+            <trans-unit id="tax" xml:space="preserve">
+                <source>Tax</source>
+            </trans-unit>
+            <trans-unit id="addto" xml:space="preserve">
+                <source>Add to cart</source>
+            </trans-unit>
+            <trans-unit id="notavailable" xml:space="preserve">
+                <source>This item is currently unavailable.</source>
+            </trans-unit>
+            <trans-unit id="added" xml:space="preserve">
+                <source>This item has been added to your basket.</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

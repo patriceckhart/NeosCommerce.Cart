@@ -26,26 +26,24 @@
     <div class="col-right">
         <div class="article-title">
             <f:if condition="{articleTitle}"><h1>{articleTitle}</h1></f:if>
-            <f:if condition="{articleNumber}"><small>Artikelnummer: {articleNumber}</small></f:if>
+            <f:if condition="{articleNumber}"><small>{f:translate(id: 'articleNumber', package: 'NeosCommerce.Cart', source: 'NodeTypes/Article')}: {articleNumber}</small></f:if>
         </div>
         <div class="article-price">
             <f:if condition="{articleOldPrice}"><span class="article-old-price">&euro; {articleOldPrice}</span></f:if>
             <f:if condition="{articlePrice}"><span class="article-normal-price">&euro; {articlePrice}</span></f:if>
             <f:if condition="{taxinclusive}==true">
                 <f:then>
-                    <small class="tax">inkl. {tax} % MwSt.</small>
+                    <small class="tax">{f:translate(id: 'inclusive', package: 'NeosCommerce.Cart', source: 'NodeTypes/Article')} {tax} % {f:translate(id: 'tax', package: 'NeosCommerce.Cart', source: 'NodeTypes/Article')}</small>
                 </f:then>
                 <f:else>
                     <div class="tax">
-                        <small class="tax">exkl. {tax} % MwSt.</small>
+                        <small class="tax">{f:translate(id: 'exclusive', package: 'NeosCommerce.Cart', source: 'NodeTypes/Article')} {tax} % {f:translate(id: 'tax', package: 'NeosCommerce.Cart', source: 'NodeTypes/Article')}</small>
                     </div>
                 </f:else>
             </f:if>
         </div>
         <div class="article-description">
             {neos:contentElement.editable(property: 'articleDescription')}
-
-
         </div>
         <div class="article-addto">
             <f:if condition="{stock}==true">
@@ -64,11 +62,11 @@
                         <f:form.hidden property="articleNumber" value="{articleNumber}" />
                         <f:form.hidden property="nodeUri" value="<neos:uri.node absolute='{true}' />" />
 
-                        <button class="btn addbtn" type="submit">In den Warenkorb</button>
+                        <button type="submit" class="btn addbtn">{f:translate(id: 'addto', package: 'NeosCommerce.Cart', source: 'NodeTypes/Article')}</button>
                     </f:form>
                 </f:then>
                 <f:else>
-                    <div class="out-of-stock">Dieser Artikel ist momentan nicht verfügbar.</div>
+                    <div class="out-of-stock">{f:translate(id: 'notavailable', package: 'NeosCommerce.Cart', source: 'NodeTypes/Article')}</div>
                 </f:else>
             </f:if>
         </div>

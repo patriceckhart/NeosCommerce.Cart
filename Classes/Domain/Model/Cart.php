@@ -24,6 +24,15 @@ class Cart {
      * @Flow\Session(autoStart = TRUE)
      */
     public function addItem($item) {
+        /*$key = array_search($item['articleNumber'], array_column($this->items, 'articleNumber'));
+        $quantity = $item['quantity'];
+        if ($key!==FALSE) {
+            $quantitycheck = $this->items[$key]["quantity"];
+            if ($quantitycheck>0) {
+                $item['quantity'] = $quantitycheck+$quantity;
+            }
+        }*/
+
         $item['timestamp'] = time();
         $this->items[] = $item;
     }
@@ -50,12 +59,31 @@ class Cart {
     /**
      * @return void
      */
+    public function cart() {
+        $cart = $this->items;
+        return $cart;
+    }
+
+    /**
+     * @return void
+     */
     public function deleteCart() {
         $cart = $this->items;
         $cartcount = count($cart);
         for ($i = 0; $i < $cartcount; $i++) {
             unset($this->items[$i]);
         }
+    }
+
+    /**
+     * @param string $id
+     * @return void
+     */
+    public function removeItem($id) {
+        $cart = $this->items;
+        $key = array_search($id, array_column($cart, 'timestamp'));
+        unset($this->items[$key]);
+        sort($this->items);
     }
 
 }
