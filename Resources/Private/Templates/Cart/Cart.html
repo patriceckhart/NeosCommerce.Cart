@@ -58,6 +58,8 @@
 
     <div class="cartFunctions">
         <f:link.action action="deleteCart" class="deletecart btn" controller="cart">Warenkorb löschen</f:link.action>
+
+        <f:form.select id="delivery" property="delivery" class="input" options="{deliveries}" optionLabelField="name" />
     </div>
 
     <div class="summary">

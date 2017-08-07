@@ -46,6 +46,12 @@ class CartController extends ActionController
     protected $countryRepository;
 
     /**
+     * @Flow\Inject
+     * @var \NeosCommerce\Cart\Domain\Repository\DeliveryRepository
+     */
+    protected $deliveryRepository;
+
+    /**
      * @param array $item
      * @return void
      */
@@ -119,6 +125,7 @@ class CartController extends ActionController
         $this->view->assign('items', $items);
 
         $this->view->assign('countries', $this->countryRepository->findAll());
+        $this->view->assign('deliveries', $this->deliveryRepository->findAll());
     }
 
     /**
