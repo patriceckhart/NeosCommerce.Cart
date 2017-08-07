@@ -9,15 +9,16 @@ use Neos\Flow\Annotations as Flow;
 use Neos\Flow\Mvc\Controller\ActionController;
 
 /**
- * @Flow\Scope("session")
+ * @Flow\Scope("singleton")
  */
 class CartController extends ActionController
 {
 
     /**
-     * @var array
+     * @Flow\Inject
+     * @var \NeosCommerce\Cart\Domain\Model\Cart
      */
-    protected $items = array();
+    protected $cart;
 
     /**
      * @var array
@@ -35,62 +36,28 @@ class CartController extends ActionController
     /**
      * @param array $item
      * @return void
-     * @Flow\Session(autoStart = TRUE)
      */
     public function addItemAction($item) {
-        $item['timestamp'] = time();
-        $this->items[] = $item;
-        $this->redirectToUri('/');
+        $this->cart->addItem($item);
+        $nodeUri = $item['nodeUri'];
+        $this->redirectToUri($nodeUri);
     }
 
     /**
      * @return void
      */
     public function miniCartAction() {
-        $cart = $this->items;
-        $cartcount = count($cart);
-        if ($cartcount>0) {
-            $sum = FALSE;
-            $sum = intval($sum);
-            foreach ($cart as $dat) {
-                $quantity = intval($dat["quantity"]);
-                $sum += $quantity;
-            }
-        } else {
-            $sum = '0';
-        }
+        $sum = $this->cart->miniCart();
+        $linkToCart = $this->settings['linkToCart'];
         $this->view->assign('result', $sum);
-    }
-
-    /**
-     * @return void
-     */
-    public function cartAction() {
-        $cart = $this->items;
-        $this->view->assign('items', $cart);
-    }
-
-    /**
-     * @param string $id
-     * @return void
-     */
-    public function removeitemAction($id) {
-        $cart = $this->items;
-        $key = array_search($id, array_column($cart, 'timestamp'));
-        unset($this->items[$key]);
-        sort($this->items);
-        $this->redirectToUri('/');
+        $this->view->assign('linkToCart', $linkToCart);
     }
 
     /**
      * @return void
      */
     public function deleteCartAction() {
-        $cart = $this->items;
-        $cartcount = count($cart);
-        for ($i = 0; $i < $cartcount; $i++) {
-            unset($this->items[$i]);
-        }
+        $this->cart->deleteCart();
         $this->redirectToUri('/');
     }
 

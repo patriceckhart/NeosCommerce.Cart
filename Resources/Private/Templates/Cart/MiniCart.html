@@ -1,3 +1,12 @@
+{namespace fusion=Neos\Fusion\ViewHelpers}
 {namespace neos=Neos\Neos\ViewHelpers}
-{result}<br />
-{linkToCart}
+<div class="cart-minicart">
+    <f:if condition="{result}==0">
+        <f:then>
+            {f:translate(id: 'emptyCart', package: 'NeosCommerce.Cart', source: 'NodeTypes/MiniCart')}
+        </f:then>
+        <f:else>
+            <a href="{linkToCart}">{f:translate(id: 'goToCart', package: 'NeosCommerce.Cart', source: 'NodeTypes/MiniCart')}</a> ({result} {f:translate(id: 'article', package: 'NeosCommerce.Cart', source: 'NodeTypes/MiniCart')}). <f:link.action action="deleteCart" controller="Cart" package="NeosCommerce.Cart" class="btn">{f:translate(id: 'deleteCartLabel', package: 'NeosCommerce.Cart', source: 'NodeTypes/MiniCart')}</f:link.action>
+        </f:else>
+    </f:if>
+</div>

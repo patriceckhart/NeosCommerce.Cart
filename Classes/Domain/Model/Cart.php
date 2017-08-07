@@ -1,0 +1,61 @@
+<?php
+namespace NeosCommerce\Cart\Domain\Model;
+
+/*
+ * This file is part of the NeosCommerce.Cart package.
+ */
+
+use Neos\Flow\Annotations as Flow;
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * @Flow\Scope("session")
+ */
+class Cart {
+
+    /**
+     * @var array
+     */
+    protected $items = array();
+
+    /**
+     * @param array $item
+     * @return void
+     * @Flow\Session(autoStart = TRUE)
+     */
+    public function addItem($item) {
+        $item['timestamp'] = time();
+        $this->items[] = $item;
+    }
+
+    /**
+     * @return void
+     */
+    public function miniCart() {
+        $cart = $this->items;
+        $cartcount = count($cart);
+        if ($cartcount>0) {
+            $sum = FALSE;
+            $sum = intval($sum);
+            foreach ($cart as $dat) {
+                $quantity = intval($dat["quantity"]);
+                $sum += $quantity;
+            }
+        } else {
+            $sum = '0';
+        }
+        return $sum;
+    }
+
+    /**
+     * @return void
+     */
+    public function deleteCart() {
+        $cart = $this->items;
+        $cartcount = count($cart);
+        for ($i = 0; $i < $cartcount; $i++) {
+            unset($this->items[$i]);
+        }
+    }
+
+}

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+	<file original="" product-name="NeosCommerce.Cart" source-language="de" datatype="plaintext">
+		<body>
+            <trans-unit id="deleteCartLabel" xml:space="preserve">
+                <source>Warenkorb löschen</source>
+            </trans-unit>
+            <trans-unit id="goToCart" xml:space="preserve">
+                <source>Zum Warenkorb</source>
+            </trans-unit>
+            <trans-unit id="emptyCart" xml:space="preserve">
+                <source>Ihr Warenkorb ist leer.</source>
+            </trans-unit>
+            <trans-unit id="article" xml:space="preserve">
+                <source>Artikel</source>
+            </trans-unit>
+		</body>
+	</file>
+</xliff>

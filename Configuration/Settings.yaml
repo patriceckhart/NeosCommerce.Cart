@@ -20,3 +20,6 @@ Neos:
     fusion:
       autoInclude:
         NeosCommerce.Cart: true
+  Flow:
+    i18n:
+      defaultLocale: de
