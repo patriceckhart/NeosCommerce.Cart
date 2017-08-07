@@ -24,6 +24,13 @@
 .flashmessages, .flashmessages li { display:block; margin:0; padding:0.5em; background:#52db6b; -webkit-border-radius: 10px; -moz-border-radius: 10px; border-radius: 10px; }
 .flashmessages { margin-bottom:4em; }
 
+/* Shopping cart */
+.cart, .cart .cartItem, .cartContentInner10, .cartContentInner20, .cartImage, .cartFunctions { float:left; width:100%; }
+.cartContentInner20, .cartImage { width:20%; }
+.cartContentInner10 { width:10%; }
+.textRight { text-align:right; }
+.textCenter { text-align:center; }
+
 @media only screen and (max-width: 1200px) {
     /* Article detail */
     .article .article-big-image img { width:100%; height:auto; }
