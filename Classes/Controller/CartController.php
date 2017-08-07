@@ -52,6 +52,16 @@ class CartController extends ActionController
     }
 
     /**
+     * @param array $item
+     * @return void
+     */
+    public function updateItemAction($item) {
+        $this->cart->updateItem($item);
+        $linkToCart = $this->settings['linkToCart'];
+        $this->redirectToUri($linkToCart);
+    }
+
+    /**
      * @return void
      */
     public function miniCartAction() {
@@ -66,6 +76,8 @@ class CartController extends ActionController
      */
     public function cartAction() {
         $items = $this->cart->cart();
+        $taxinclusive = $this->settings['taxinclusive'];
+        $this->view->assign('taxinclusive', $taxinclusive);
         $this->view->assign('items', $items);
     }
 
@@ -74,7 +86,8 @@ class CartController extends ActionController
      */
     public function deleteCartAction() {
         $this->cart->deleteCart();
-        $this->redirectToUri('/');
+        $linkToCart = $this->settings['linkToCart'];
+        $this->redirectToUri($linkToCart);
     }
 
     /**
@@ -83,7 +96,8 @@ class CartController extends ActionController
      */
     public function removeItemAction($id) {
         $this->cart->removeItem($id);
-        $this->redirectToUri('/');
+        $linkToCart = $this->settings['linkToCart'];
+        $this->redirectToUri($linkToCart);
     }
 
 }

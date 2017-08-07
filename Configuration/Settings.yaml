@@ -3,6 +3,7 @@ NeosCommerce:
     templateRootPath: 'resource://NeosCommerce.Cart/Private/Templates/'
     linkToCart: '/warenkorb.html'
     linkToHome: '/'
+    taxinclusive: true
 Neos:
   Neos:
     userInterface:

@@ -27,19 +27,52 @@ class Cart {
         $cart = $this->items;
         $quantity = intval($item['quantity']);
         $key = array_search($item['articleNumber'], array_column($cart, 'articleNumber'));
+
         if ($key!==FALSE) {
             $quantitycheck = intval($cart[$key]['quantity']);
             if ($quantitycheck>0) {
                 $quantity = intval($quantitycheck+$quantity);
-                $item['quantity'] = $quantity;
-                $item['timestamp'] = time();
-                $this->items[$key] = $item;
             }
+        }
+
+        $item['quantity'] = $quantity;
+        $item['timestamp'] = time();
+
+        $price = $item['articlePrice'];
+        $price = str_replace(',', '.', $price);
+        $fullprice = $price*$quantity;
+        $item['fullprice'] = floatval($fullprice);
+        $item['articlePrice'] = floatval($price);
+
+        if ($key!==FALSE) {
+            $this->items[$key] = $item;
         } else {
-            $item['quantity'] = $quantity;
-            $item['timestamp'] = time();
             $this->items[] = $item;
         }
+
+    }
+
+    /**
+     * @param array $item
+     * @return void
+     * @Flow\Session(autoStart = TRUE)
+     */
+    public function updateItem($item) {
+        $cart = $this->items;
+        $quantity = intval($item['quantity']);
+        $key = array_search($item['articleNumber'], array_column($cart, 'articleNumber'));
+
+        $item['quantity'] = $quantity;
+        $item['timestamp'] = time();
+
+        $price = $item['articlePrice'];
+        $price = str_replace(',', '.', $price);
+        $fullprice = $price*$quantity;
+        $item['fullprice'] = floatval($fullprice);
+        $item['articlePrice'] = floatval($price);
+
+        $this->items[$key] = $item;
+
     }
 
     /**

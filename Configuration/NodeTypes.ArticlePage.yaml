@@ -54,21 +54,13 @@
           position: 4
     'tax':
       type: string
+      defaultValue: '20'
       ui:
         label: 'Mehrwertsteuer (in Prozent)'
         reloadIfChanged: TRUE
         inspector:
           group: 'shop'
           position: 5
-    'taxinclusive':
-      type: boolean
-      defaultValue: TRUE
-      ui:
-        label: 'Preis inkl. Mehrwertsteuer'
-        reloadIfChanged: TRUE
-        inspector:
-          group: 'shop'
-          position: 6
     'stock':
       type: boolean
       defaultValue: TRUE

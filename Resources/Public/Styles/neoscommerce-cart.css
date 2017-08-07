@@ -25,11 +25,14 @@
 .flashmessages { margin-bottom:4em; }
 
 /* Shopping cart */
-.cart, .cart .cartItem, .cartContentInner10, .cartContentInner20, .cartImage, .cartFunctions { float:left; width:100%; }
+.cart, .cart .cartItem, .cartContentInner10, .cartContentInner20, .cartImage, .cartFunctions, .cartFunctions .btn, .summary { float:left; width:100%; }
+.cartFunctions .btn { width:auto; }
 .cartContentInner20, .cartImage { width:20%; }
 .cartContentInner10 { width:10%; }
 .textRight { text-align:right; }
 .textCenter { text-align:center; }
+.cartFunctions { margin-top:2em; margin-bottom:2em; }
+.summaryInner { float:right; }
 
 @media only screen and (max-width: 1200px) {
     /* Article detail */
