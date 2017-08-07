@@ -7,8 +7,7 @@ prototype(Cart:Article) {
     stock = ${q(documentNode).property('stock')}
     image = ${q(documentNode).property('image')}
     assets = ${q(documentNode).property('assets')}
-
-    #taxinclusive = ${Configuration.setting('NeosCommece.Cart.taxinclusive')}
+    taxinclusive = ${Configuration.setting('NeosCommerce.Cart.taxinclusive')}
     @cache {
         mode = 'uncached'
         context {

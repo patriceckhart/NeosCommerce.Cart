@@ -21,6 +21,7 @@
                         <div class="cartContent">
                             <div class="cartContentInner30">
                                 <strong>{item.articleTitle}</strong><br />
+                                <small>{f:translate(id: 'articleNumber', package: 'NeosCommerce.Cart', source: 'NodeTypes/Article')}: {item.articleNumber}</small><br />
                                 <f:format.crop maxCharacters="140"><f:format.stripTags>{item.articleDescription}</f:format.stripTags></f:format.crop>
                             </div>
                             <f:form action="updateItem" objectName="item" controller="Cart" package="NeosCommerce.Cart">
