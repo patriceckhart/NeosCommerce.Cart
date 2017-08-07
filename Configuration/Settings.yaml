@@ -21,6 +21,32 @@ Neos:
     fusion:
       autoInclude:
         NeosCommerce.Cart: true
+    modules:
+      neosCommerceCart:
+        label: 'Shop'
+        controller: '\Neos\Neos\Controller\Module\ManagementController'
+        description: 'Neos Commerce Cart Admin'
+        icon: 'icon-shopping-cart'
+        resource: 'Neos_Neos_Backend_Module_Management'
+        submodules:
+          Country:
+            label: 'Länder'
+            controller: '\NeosCommerce\Cart\Controller\CountryController'
+            description: 'Mit diesem Modul, können Sie die Länder bearbeiten.'
+            icon: 'icon-globe'
+            actions:
+              index:
+                label: 'Länder bearbeiten'
+                title: 'Länder bearbeiten'
+          Delivery:
+            label: 'Versandarten'
+            controller: '\NeosCommerce\Cart\Controller\DeliveryController'
+            description: 'Mit diesem Modul, können Sie die Versandarten bearbeiten.'
+            icon: 'icon-plane'
+            actions:
+              index:
+                label: 'Versandarten bearbeiten'
+                title: 'Versandarten bearbeiten'
   Flow:
     i18n:
       defaultLocale: de

@@ -2,10 +2,20 @@ privilegeTargets:
   'Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege':
     'NeosCommerce.Cart:CartControllerActions':
       matcher: 'method(NeosCommerce\Cart\Controller\CartController->.*Action())'
+    'NeosCommerce.Cart:CountryControllerActions':
+      matcher: 'method(NeosCommerce\Cart\Controller\CountryController->.*Action())'
+    'NeosCommerce.Cart:DeliveryControllerActions':
+      matcher: 'method(NeosCommerce\Cart\Controller\DeliveryController->.*Action())'
 
 roles:
   'Neos.Flow:Everybody':
     privileges:
       -
         privilegeTarget: 'NeosCommerce.Cart:CartControllerActions'
+        permission: GRANT
+      -
+        privilegeTarget: 'NeosCommerce.Cart:CountryControllerActions'
+        permission: GRANT
+      -
+        privilegeTarget: 'NeosCommerce.Cart:DeliveryControllerActions'
         permission: GRANT
