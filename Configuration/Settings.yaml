@@ -4,6 +4,7 @@ NeosCommerce:
     linkToCart: '/warenkorb.html'
     linkToHome: '/'
     taxinclusive: true
+    test: 'Test'
 Neos:
   Neos:
     userInterface:

@@ -3,10 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="5957bb42-d268-48e4-a3b0-14e82dc3da22" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Controller/CartController.php" afterPath="$PROJECT_DIR$/Classes/Controller/CartController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Domain/Model/Cart.php" afterPath="$PROJECT_DIR$/Classes/Domain/Model/Cart.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/Settings.yaml" afterPath="$PROJECT_DIR$/Configuration/Settings.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css" afterPath="$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,15 +26,27 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="neoscommerce-cart.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="645">
+              <caret line="43" column="7" lean-forward="false" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="Cart.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-343">
-              <caret line="36" column="97" lean-forward="true" selection-start-line="36" selection-start-column="97" selection-end-line="36" selection-end-column="97" />
+            <state relative-caret-position="362">
+              <caret line="81" column="85" lean-forward="true" selection-start-line="81" selection-start-column="85" selection-end-line="81" selection-end-column="85" />
               <folding>
                 <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#f:then#0;n#f:if#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#f:then#0;n#f:if#0;n#div#0;n#div#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#f:then#0;n#f:if#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#f:then#0;n#f:if#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#3;n#f:form#0;n#div#1;n#div#0;n#f:for#0;n#f:then#0;n#f:if#0;n#div#0;n#div#0;n#!!top" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -43,33 +55,9 @@
       <file leaf-file-name="Settings.yaml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="375">
-              <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+            <state relative-caret-position="390">
+              <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Cart.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Cart.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-16">
-              <caret line="58" column="7" lean-forward="true" selection-start-line="58" selection-start-column="7" selection-end-line="58" selection-end-column="7" />
-              <folding>
-                <element signature="e#112#146#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CartController.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="369">
-              <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
-              <folding>
-                <element signature="e#110#144#0#PHP" expanded="true" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -88,6 +76,7 @@
       <find>inkl.</find>
       <find>taxvalue</find>
       <find>sumExcl</find>
+      <find>btn-small</find>
     </findStrings>
     <replaceStrings>
       <replace>property</replace>
@@ -121,17 +110,17 @@
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/MiniCart.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/MiniCart.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf" />
-        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Article.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Cart.fusion" />
-        <option value="$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css" />
         <option value="$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml" />
-        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
-        <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
         <option value="$PROJECT_DIR$/Classes/Domain/Model/Cart.php" />
         <option value="$PROJECT_DIR$/Classes/Controller/CartController.php" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Article.xlf" />
+        <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
+        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
+        <option value="$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
       </list>
     </option>
@@ -453,15 +442,15 @@
       <workItem from="1501826308385" duration="4708000" />
       <workItem from="1502079584022" duration="5674000" />
       <workItem from="1502088907802" duration="328000" />
-      <workItem from="1502090976373" duration="8661000" />
+      <workItem from="1502090976373" duration="14530000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43535000" />
+    <option name="totallyTimeSpent" value="49404000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="24" width="2560" height="1344" extended-state="6" />
+    <frame x="0" y="23" width="2560" height="1344" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23312153" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -678,45 +667,8 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController (copy: conflict on 2017-08-07).php" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/MiniCart.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Article.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="46" lean-forward="true" selection-start-line="5" selection-start-column="46" selection-end-line="5" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="0" lean-forward="true" selection-start-line="28" selection-start-column="0" selection-end-line="28" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/MiniCart.xlf">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/Main.xlf" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/Main.xlf" />
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.ArticleMenu.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -789,14 +741,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="81" lean-forward="false" selection-start-line="5" selection-start-column="81" selection-end-line="5" selection-end-column="81" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Configuration/NodeTypes.ArticlePage.yaml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="648">
@@ -805,18 +749,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/MiniCart.xlf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="375">
-          <caret line="25" column="23" lean-forward="true" selection-start-line="25" selection-start-column="23" selection-end-line="25" selection-end-column="23" />
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html">
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/MiniCart.xlf">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="885">
-          <caret line="59" column="70" lean-forward="false" selection-start-line="59" selection-start-column="70" selection-end-line="59" selection-end-column="70" />
+        <state relative-caret-position="285">
+          <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/MiniCart.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Article.xlf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="25" lean-forward="false" selection-start-line="24" selection-start-column="25" selection-end-line="24" selection-end-column="25" />
           <folding />
         </state>
       </provider>
@@ -833,22 +801,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="369">
-          <caret line="81" column="0" lean-forward="true" selection-start-line="81" selection-start-column="0" selection-end-line="81" selection-end-column="0" />
+        <state relative-caret-position="174">
+          <caret line="68" column="52" lean-forward="true" selection-start-line="68" selection-start-column="52" selection-end-line="68" selection-end-column="52" />
           <folding>
             <element signature="e#110#144#0#PHP" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="38" lean-forward="true" selection-start-line="1" selection-start-column="38" selection-end-line="1" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="23" lean-forward="true" selection-start-line="26" selection-start-column="23" selection-end-line="26" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="7" lean-forward="false" selection-start-line="43" selection-start-column="7" selection-end-line="43" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-343">
-          <caret line="36" column="97" lean-forward="true" selection-start-line="36" selection-start-column="97" selection-end-line="36" selection-end-column="97" />
+        <state relative-caret-position="362">
+          <caret line="81" column="85" lean-forward="true" selection-start-line="81" selection-start-column="85" selection-end-line="81" selection-end-column="85" />
           <folding>
             <element signature="n#style#0;n#div#1;n#div#1;n#div#0;n#f:then#0;n#f:if#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#2;n#div#1;n#div#0;n#f:then#0;n#f:if#0;n#div#0;n#div#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#3;n#div#1;n#div#0;n#f:then#0;n#f:if#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#4;n#div#1;n#div#0;n#f:then#0;n#f:if#0;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#3;n#f:form#0;n#div#1;n#div#0;n#f:for#0;n#f:then#0;n#f:if#0;n#div#0;n#div#0;n#!!top" expanded="true" />
           </folding>
         </state>
       </provider>

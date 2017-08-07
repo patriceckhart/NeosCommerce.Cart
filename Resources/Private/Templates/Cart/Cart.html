@@ -8,18 +8,18 @@
                 <div class="cartItem cartItemTitle">
                     <div class="cartImage">&nbsp;</div>
                     <div class="cartContent">
-                        <div class="cartContentInner20">Produkt</div>
+                        <div class="cartContentInner30">Produkt</div>
                         <div class="cartContentInner10 sub" style="text-align:right;">Preis</div>
                         <div class="cartContentInner10 quantinner" style="text-align:center;">Menge</div>
                         <div class="cartContentInner10" style="text-align:right;">Zwischensumme</div>
-                        <div class="cartContentInner20">&nbsp;</div>
+                        <div class="cartContentInner10" style="float:right;">&nbsp;</div>
                     </div>
                 </div>
                 <f:for each="{items}" as="item">
                     <div class="cartItem">
                         <div class="cartImage"><img src="{item.image}" alt="" /></div>
                         <div class="cartContent">
-                            <div class="cartContentInner20">
+                            <div class="cartContentInner30">
                                 <strong>{item.articleTitle}</strong><br />
                                 <f:format.crop maxCharacters="140"><f:format.stripTags>{item.articleDescription}</f:format.stripTags></f:format.crop>
                             </div>
@@ -27,7 +27,7 @@
                                 <div class="cartContentInner10 textRight sub"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.articlePrice}</f:format.currency> <br /><small><f:if condition="{taxinclusive}==true"><f:then>inkl.</f:then><f:else>exkl.</f:else></f:if> {item.tax}% MwSt.</small></div>
                                 <div class="cartContentInner10 textCenter quantinner"><f:form.select property="quantity" id="quantity" class="quantityinput" value="{item.quantity}" options="{1: '1', 2: '2', 3: '3', 4: '4', 5: '5', 6: '6', 7: '7', 8: '8', 9: '9', 10: '10', 11: '11', 12: '12', 13: '13', 14: '14', 15: '15', 16: '16', 17: '17', 18: '18', 19: '19', 20: '20', 21: '21', 22: '22', 23: '23', 24: '24', 25: '25', 26: '26', 27: '27', 28: '28', 29: '29', 30: '30', 31: '31', 32: '32', 33: '33', 34: '34', 35: '35', 36: '36', 37: '37', 38: '38', 39: '39', 40: '40', 41: '41', 42: '42', 43: '43', 44: '44', 45: '45', 46: '46', 47: '47', 48: '48', 49: '49', 50: '50', 51: '51', 52: '52', 53: '53', 54: '54', 55: '55', 56: '56', 57: '57', 58: '58', 59: '59', 60: '60', 61: '61', 62: '62', 63: '63', 64: '64', 65: '65', 66: '66', 67: '67', 68: '68', 69: '69', 70: '70', 71: '71', 72: '72', 73: '73', 74: '74', 75: '75', 76: '76', 77: '77', 78: '78', 79: '79', 80: '80', 81: '81', 82: '82', 83: '83', 84: '84', 85: '85', 86: '86', 87: '87', 88: '88', 89: '89', 90: '90', 91: '91', 92: '92', 93: '93', 94: '94', 95: '95', 96: '96', 97: '97', 98: '98', 99: '99', 100: '100'}" /></div>
                                 <div class="cartContentInner10 textRight"><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{item.fullprice}</f:format.currency> <br /><small><f:if condition="{taxinclusive}==true"><f:then>inkl.</f:then><f:else>exkl.</f:else></f:if> {item.tax}% MwSt.</small></div>
-                                <div class="cartContentInner20 textRight">
+                                <div class="cartContentInner20 textRight" style="float:right;">
 
                                     <f:form.hidden property="image" value="{item.image}" />
                                     <f:form.hidden property="articleTitle" value="{item.articleTitle}" />
@@ -37,15 +37,15 @@
                                     <f:form.hidden property="taxvalue" value="{item.taxvalue}" />
                                     <f:form.hidden property="articleNumber" value="{item.articleNumber}" />
 
-                                    <button type="submit">Aktualisieren</button>
+                                    <button type="submit" class="btn btn-small">Aktualisieren</button>
                             </f:form>
-                            <f:link.action action="removeItem" controller="cart" arguments="{id: item.timestamp}">Löschen <i class="fa fa-trash-o" aria-hidden="true"></i></f:link.action>
+                            <f:form action="removeItem" controller="Cart" package="NeosCommerce.Cart" arguments="{id: item.timestamp}">
+                                <button type="submit" class="btn btn-small">Löschen</button>
+                            </f:form>
                         </div>
                     </div>
     </div>
     </f:for>
-
-
 
     <div class="cartFunctions">
         <f:link.action action="deleteCart" class="deletecart btn" controller="cart">Warenkorb löschen</f:link.action>
@@ -64,7 +64,6 @@
                 <f:form.hidden name="subtotal" value="{subtotal}" />
                 <f:form.hidden name="taxvalue" value="{taxvalue}" />
                 <f:form.hidden name="fullprice" value="{fullprice}" />
-                <f:form.hidden name="hidden" value="0" />
 
         </div>
     </div>
@@ -84,18 +83,19 @@
         </f:for>
 
     </f:if>
+
+    <a id="finish" class="btn floatright checkout">Bestellung abschließen</a>
+
     <div class="dataform">
-        <h2>Ihre Daten</h2>
+        <h2>Bestellung abschließen</h2>
         <div>
             <div class="input">
                 <label for="firstname">Vorname: *</label>
                 <f:form.textfield id="firstname" name="firstname" class="input" value="" placeholder="Vorname" />
-                <span class="helpline" id="errorFirstName">Bitte geben Sie Ihren Vornamen ein.</span>
             </div>
             <div class="input">
                 <label for="lastname">Nachname: *</label>
                 <f:form.textfield id="lastname" name="lastname" class="input" value="" placeholder="Nachname" />
-                <span class="helpline" id="errorLastName">Bitte geben Sie Ihren Nachnamen ein.</span>
             </div>
             <div class="input">
                 <label for="address">Adresse:</label>
@@ -112,16 +112,14 @@
             <div class="input">
                 <label for="phone">Telefon: *</label>
                 <f:form.textfield id="phone" name="phone" class="input" value="" placeholder="Telefon" />
-                <span class="helpline" id="errorPhone">Bitte geben Sie Ihre Telefonnummer ein.</span>
             </div>
             <div class="input">
                 <label for="email">E-Mail Adresse: *</label>
                 <f:form.textfield id="email" name="email" class="input" value="" placeholder="E-Mail Adresse" />
-                <span class="helpline" id="errorEmail">Bitte geben Sie Ihre E-Mail Adresse ein.</span>
             </div>
         </div>
 
-        <f:form.submit class="btn" id="submitBtn" value="Bestellung absenden" />
+        <f:form.submit class="btn floatright checkout" id="checkout" value="Bestellung absenden" />
         </f:form>
     </div>
     </f:then>

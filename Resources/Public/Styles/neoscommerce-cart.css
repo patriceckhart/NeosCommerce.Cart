@@ -25,14 +25,24 @@
 .flashmessages { margin-bottom:4em; }
 
 /* Shopping cart */
-.cart, .cart .cartItem, .cartContentInner10, .cartContentInner20, .cartImage, .cartFunctions, .cartFunctions .btn, .summary { float:left; width:100%; }
+.cart, .cart .cartItem, .cartContentInner10, .cartContentInner20, .cartContentInner30, .cartImage, .cartFunctions, .cartFunctions .btn, .summary, .dataform { float:left; width:100%; }
 .cartFunctions .btn { width:auto; }
 .cartContentInner20, .cartImage { width:20%; }
 .cartContentInner10 { width:10%; }
+.cartContentInner30 { width:30%; }
 .textRight { text-align:right; }
 .textCenter { text-align:center; }
 .cartFunctions { margin-top:2em; margin-bottom:2em; }
-.summaryInner { float:right; }
+.summaryInner { float:right; width:100%; }
+.summaryPrice { float:right; text-align: right; }
+.total { font-size:1.5em; }
+.cartItem { margin-top:1.5em; margin-bottom:1.5em; }
+.cartItemTitle { color:#666; border-bottom:1px solid #CCC; padding-bottom:1em; }
+.cartContent .btn-small { padding:0.4em; padding-left:0.8em; padding-right:0.8em; border:0; margin-bottom:0.8em; }
+.dataform { margin-top:2em; }
+.dataform h2 { margin-bottom:1em; }
+#finish, #checkout { cursor:pointer; font-size:1em; margin-top:1em; }
+
 
 @media only screen and (max-width: 1200px) {
     /* Article detail */
