@@ -5,6 +5,7 @@
             <tr>
                 <td>Versandart</td>
                 <td>Kosten</td>
+                <td>ID</td>
                 <td>&nbsp;</td>
             </tr>
             </thead>
@@ -13,6 +14,7 @@
                 <tr>
                     <td>{delivery.name}</td>
                     <td><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{delivery.costs}</f:format.currency></td>
+                    <td><f:format.identifier>{delivery}</f:format.identifier></td>
                     <td class="neos-action">
                         <div class="neos-pull-right">
                             <f:form action="delete" arguments="{delivery: delivery}">

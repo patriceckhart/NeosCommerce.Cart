@@ -215,7 +215,7 @@ class CartController extends ActionController
         $orderbody = 'Bestellung: <br />'.$mailoutput;
 
 
-        $confirmation = new \Neos\SwiftMailer\Message();
+        /*$confirmation = new \Neos\SwiftMailer\Message();
         $confirmation->setFrom(array($senderEmailAddress))
             ->setTo(array($email))
             ->setSubject($confirmationSubject)
@@ -227,7 +227,7 @@ class CartController extends ActionController
             ->setTo(array($orderEmailAddress))
             ->setSubject($orderSubject)
             ->setBody($orderbody, 'text/html')
-            ->send();
+            ->send();*/
 
         $this->cart->deleteCart();
         $linkToCart = $this->settings['linkToCart'];
