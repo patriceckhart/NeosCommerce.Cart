@@ -5,6 +5,10 @@ NeosCommerce:
     linkToHome: '/'
     taxinclusive: true
     standardDelivery: '82fda6b1-2d54-4a4b-be71-522de65deb26'
+    senderEmailAddress: 'postmaster@patriceckhart.com'
+    orderEmailAddress: 'mail@patriceckhart.com'
+    confirmationSubject: 'Bestellbestätigung'
+    orderSubject: 'Bestellung'
 Neos:
   Neos:
     userInterface:

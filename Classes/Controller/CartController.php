@@ -165,4 +165,74 @@ class CartController extends ActionController
         $this->redirectToUri($linkToCart);
     }
 
+    /**
+     * @return void
+     */
+    public function checkoutAction() {
+
+        $orderEmailAddress = $this->settings['orderEmailAddress'];
+        $senderEmailAddress = $this->settings['senderEmailAddress'];
+        $confirmationSubject = $this->settings['confirmationSubject'];
+        $orderSubject = $this->settings['orderSubject'];
+
+        /* Confirmation */
+        $cart = $this->cart->cart();
+        $cartcount = count($cart);
+        $mailoutput = "";
+
+        for ($i = 0; $i < $cartcount; $i++) {
+            $innerarray = $cart[$i];
+            $quantity = $innerarray['quantity'];
+            $title = $innerarray['articleTitle'];
+            $description = $innerarray['articleDescription'];
+            $price = $innerarray['articlePrice'];
+            $articlenumber = $innerarray['articleNumber'];
+            $tax = $innerarray['tax'];
+            $taxvalue = $innerarray['taxvalue'];
+
+            //$priceraw = str_replace(',', '.', $price);
+            //$subtotal = $priceraw - $taxvalue;
+
+            $priceraw = $price;
+            $subtotal = $priceraw - $taxvalue;
+
+
+            $mailoutput .= '
+            <tr>
+		<td>'.$quantity.'</td>
+      <td>'.$title.'</td>
+      <td>EUR '.$price.'</td>
+    </tr>
+            ';
+
+        }
+
+
+
+        $email = "me@patric.at";
+
+        $confirmationbody = 'Bestätigung: <br />'.$mailoutput;
+        $orderbody = 'Bestellung: <br />'.$mailoutput;
+
+
+        $confirmation = new \Neos\SwiftMailer\Message();
+        $confirmation->setFrom(array($senderEmailAddress))
+            ->setTo(array($email))
+            ->setSubject($confirmationSubject)
+            ->setBody($confirmationbody, 'text/html')
+            ->send();
+
+        $order = new \Neos\SwiftMailer\Message();
+        $order->setFrom(array($senderEmailAddress))
+            ->setTo(array($orderEmailAddress))
+            ->setSubject($orderSubject)
+            ->setBody($orderbody, 'text/html')
+            ->send();
+
+        $this->cart->deleteCart();
+        $linkToCart = $this->settings['linkToCart'];
+        $this->redirectToUri($linkToCart);
+
+    }
+
 }
