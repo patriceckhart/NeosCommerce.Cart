@@ -114,6 +114,23 @@ class CartController extends ActionController
 
         $taxinclusive = $this->settings['taxinclusive'];
 
+        if ($this->request->hasArgument('delivery')) {
+            $delivery = $this->request->getArgument('delivery');
+        } else {
+            $delivery = $this->settings['standardDelivery'];
+        }
+
+        $this->view->assign('delivery', $delivery);
+
+        $deliveries = '\NeosCommerce\Cart\Domain\Model\Delivery';
+        $query = $this->persistenceManager->createQueryForType($deliveries);
+        $result = $query->matching($query->equals('Persistence_Object_Identifier', $delivery))->execute()->getFirst();
+        $deliverycosts = $result->getCosts();
+        $this->view->assign('deliverycosts', $deliverycosts);
+
+        $sumExcl = $sumExcl+$deliverycosts;
+
+
         if($taxinclusive==true) {
             $this->view->assign('fullprice', $sumExcl);
         } else {
@@ -126,6 +143,7 @@ class CartController extends ActionController
 
         $this->view->assign('countries', $this->countryRepository->findAll());
         $this->view->assign('deliveries', $this->deliveryRepository->findAll());
+
     }
 
     /**

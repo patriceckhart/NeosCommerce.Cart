@@ -46,6 +46,8 @@
                                     <f:form.hidden property="taxvalue" value="{item.taxvalue}" />
                                     <f:form.hidden property="articleNumber" value="{item.articleNumber}" />
 
+                                    <f:form.hidden name="delivery" value="{delivery}" />
+
                                     <button type="submit" class="btn btn-small" style="display:none;">Aktualisieren</button>
                             </f:form>
                             <f:form action="removeItem" controller="Cart" package="NeosCommerce.Cart" arguments="{id: item.timestamp}">
@@ -59,13 +61,28 @@
     <div class="cartFunctions">
         <f:link.action action="deleteCart" class="deletecart btn" controller="cart">Warenkorb löschen</f:link.action>
 
-        <f:form.select id="delivery" property="delivery" class="input" options="{deliveries}" optionLabelField="name" />
+        <div class="deliveryoptions">
+            <f:form action="cart" controller="Cart" package="NeosCommerce.Cart">
+                <script>
+                    $(function() {
+                        $('.delivery').change(function() {
+                            this.form.submit();
+                        });
+                    });
+                </script>
+                <div class="input">
+                    <label for="delivery">Versandart:</label>
+                    <f:form.select id="delivery" name="delivery" class="delivery" value="{delivery}" options="{deliveries}" optionLabelField="name" />
+                </div>
+            </f:form>
+        </div>
+
     </div>
 
     <div class="summary">
         <div class="summaryInner">
             <span class="summaryPrice">Zwischensumme: <strong><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{subtotal}</f:format.currency></strong></span><br />
-            <span class="summaryPrice">Versand &amp; Verpackung: <strong>xx</strong></span><br />
+            <span class="summaryPrice">Versand &amp; Verpackung: <strong><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{deliverycosts}</f:format.currency></strong></span><br />
             <span class="summaryPrice">Mehrwertsteuer: <strong><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{taxvalue}</f:format.currency></strong></span><br />
             <span class="summaryPrice total">Gesamtsumme: <strong><f:format.currency currencySign="€" decimalSeparator="," thousandsSeparator="." prependCurrency="true">{fullprice}</f:format.currency></strong></span><br />
 
@@ -137,11 +154,23 @@
                 <label for="email">E-Mail Adresse: *</label>
                 <f:form.textfield id="email" name="email" class="input" value="" placeholder="E-Mail Adresse" />
             </div>
+            <div>
+                <input type="checkbox" name="deliveryaddress" id="deliveryaddress" class="checkbox">
+                <label for="deliveryaddress">Abweichende Lieferadresse</label>
+                <script>
+                    $(function() {
+                        $('#deliveryaddress').click(function() {
+                            $('.dataform-2').toggleClass('display');
+                            $('.dataform-inner').toggleClass('w50');
+                        });
+                    });
+                </script>
+            </div>
         </div>
 
     </div>
 
-    <div class="dataform-inner dataform-padding-left">
+    <div class="dataform-inner dataform-padding-left dataform-2">
         <h2>Abweichende Lieferadresse</h2>
         <div>
             <div class="input">

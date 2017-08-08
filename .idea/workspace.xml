@@ -4,15 +4,9 @@
     <list default="true" id="5957bb42-d268-48e4-a3b0-14e82dc3da22" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Controller/CartController.php" afterPath="$PROJECT_DIR$/Classes/Controller/CartController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Controller/CountryController.php" afterPath="$PROJECT_DIR$/Classes/Controller/CountryController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Controller/DeliveryController.php" afterPath="$PROJECT_DIR$/Classes/Controller/DeliveryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Configuration/Settings.yaml" afterPath="$PROJECT_DIR$/Configuration/Settings.yaml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Country/Edit.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Country/Edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Country/Index.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Country/Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Country/New.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Country/New.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Delivery/Edit.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Delivery/Edit.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Delivery/Index.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Delivery/Index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Delivery/New.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Delivery/New.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css" afterPath="$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,12 +25,12 @@
     <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="Cart.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file leaf-file-name="neoscommerce-cart.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="627">
-              <caret line="61" column="117" lean-forward="false" selection-start-line="61" selection-start-column="117" selection-end-line="61" selection-end-column="117" />
+            <state relative-caret-position="465">
+              <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -45,10 +39,32 @@
       <file leaf-file-name="CartController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="475">
-              <caret line="130" column="7" lean-forward="true" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
+            <state relative-caret-position="641">
+              <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
               <folding>
                 <element signature="e#110#144#0#PHP" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Settings.yaml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Cart.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="897">
+              <caret line="172" column="65" lean-forward="true" selection-start-line="172" selection-start-column="65" selection-end-line="172" selection-end-column="65" />
+              <folding>
+                <element signature="e#6640#6645#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -78,6 +94,7 @@
       <find>country</find>
       <find>countries</find>
       <find>&quot;</find>
+      <find>costs</find>
     </findStrings>
     <replaceStrings>
       <replace>property</replace>
@@ -89,6 +106,7 @@
       <replace>delivery</replace>
       <replace>deliveries</replace>
       <replace>'</replace>
+      <replace>standard</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -123,17 +141,14 @@
         <option value="$PROJECT_DIR$/Classes/Domain/Model/Cart.php" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/de/NodeTypes/Article.xlf" />
         <option value="$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Article.xlf" />
-        <option value="$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Article.html" />
         <option value="$PROJECT_DIR$/composer.json" />
         <option value="$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Article.fusion" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/NodeTypes/Article.html" />
         <option value="$PROJECT_DIR$/Classes/Domain/Model/Countries.php" />
         <option value="$PROJECT_DIR$/Configuration/Policy.yaml" />
-        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
         <option value="$PROJECT_DIR$/Classes/Domain/Repository/CountryRepository.php" />
         <option value="$PROJECT_DIR$/Classes/Domain/Model/Country.php" />
-        <option value="$PROJECT_DIR$/Classes/Domain/Model/Delivery.php" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Country/New.html" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Country/Edit.html" />
         <option value="$PROJECT_DIR$/Classes/Controller/CountryController.php" />
@@ -142,19 +157,29 @@
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Delivery/Index.html" />
         <option value="$PROJECT_DIR$/Classes/Controller/DeliveryController.php" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Delivery/Edit.html" />
+        <option value="$PROJECT_DIR$/Classes/Domain/Model/Delivery.php" />
+        <option value="$PROJECT_DIR$/Configuration/Settings.yaml" />
         <option value="$PROJECT_DIR$/Classes/Controller/CartController.php" />
         <option value="$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html" />
+        <option value="$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css" />
       </list>
     </option>
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsFlowSettings">
+    <service-enabled>false</service-enabled>
+    <exe-path />
+    <annotation-enable>false</annotation-enable>
+    <other-services-enabled>false</other-services-enabled>
+    <auto-save>true</auto-save>
+  </component>
   <component name="JsGulpfileManager">
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
-  <component name="ProjectFrameBounds">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="969" />
@@ -177,6 +202,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -323,8 +350,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -460,18 +485,19 @@
       <workItem from="1502121779763" duration="787000" />
       <workItem from="1502122808951" duration="4049000" />
       <workItem from="1502129609200" duration="308000" />
+      <workItem from="1502166119599" duration="2635000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56776000" />
+    <option name="totallyTimeSpent" value="59411000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1680" height="969" extended-state="0" />
+    <frame x="0" y="23" width="2560" height="1343" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.23312153" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16666667" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1096108" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32906324" sideWeight="0.5" order="13" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32962668" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -480,7 +506,6 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
@@ -492,6 +517,7 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Notes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -545,13 +571,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="75">
           <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/neoscommerce-cart.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -639,13 +658,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Translations/en/NodeTypes/Article.xlf" />
-    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="855">
-          <caret line="57" column="0" lean-forward="false" selection-start-line="57" selection-start-column="0" selection-end-line="57" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Fusion/NodeTypes/Cart.fusion" />
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Article.html" />
     <entry file="file://$PROJECT_DIR$/composer.json">
@@ -700,14 +712,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Delivery.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="821">
-          <caret line="58" column="5" lean-forward="false" selection-start-line="58" selection-start-column="5" selection-end-line="58" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Cart.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="210">
@@ -722,14 +726,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
           <caret line="36" column="5" lean-forward="false" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -796,10 +792,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Classes/Domain/Model/Delivery.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="870">
+          <caret line="59" column="0" lean-forward="true" selection-start-line="59" selection-start-column="0" selection-end-line="59" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Configuration/Settings.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="60" lean-forward="false" selection-start-line="6" selection-start-column="60" selection-end-line="6" selection-end-column="60" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/JavaScript/neoscommerce-cart.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/Classes/Controller/CartController.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="475">
-          <caret line="130" column="7" lean-forward="true" selection-start-line="130" selection-start-column="7" selection-end-line="130" selection-end-column="7" />
+        <state relative-caret-position="641">
+          <caret line="123" column="0" lean-forward="true" selection-start-line="123" selection-start-column="0" selection-end-line="123" selection-end-column="0" />
           <folding>
             <element signature="e#110#144#0#PHP" expanded="true" />
           </folding>
@@ -808,8 +828,18 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Resources/Private/Templates/Cart/Cart.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="627">
-          <caret line="61" column="117" lean-forward="false" selection-start-line="61" selection-start-column="117" selection-end-line="61" selection-end-column="117" />
+        <state relative-caret-position="897">
+          <caret line="172" column="65" lean-forward="true" selection-start-line="172" selection-start-column="65" selection-end-line="172" selection-end-column="65" />
+          <folding>
+            <element signature="e#6640#6645#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Resources/Public/Styles/neoscommerce-cart.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="465">
+          <caret line="31" column="34" lean-forward="true" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
           <folding />
         </state>
       </provider>

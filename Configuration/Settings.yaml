@@ -4,6 +4,7 @@ NeosCommerce:
     linkToCart: '/warenkorb.html'
     linkToHome: '/'
     taxinclusive: true
+    standardDelivery: '82fda6b1-2d54-4a4b-be71-522de65deb26'
 Neos:
   Neos:
     userInterface:
