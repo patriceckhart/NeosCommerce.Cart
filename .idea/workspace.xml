@@ -1,10 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5957bb42-d268-48e4-a3b0-14e82dc3da22" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Classes/Controller/CartController.php" afterPath="$PROJECT_DIR$/Classes/Controller/CartController.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Resources/Private/Templates/Delivery/Index.html" afterPath="$PROJECT_DIR$/Resources/Private/Templates/Delivery/Index.html" />
-    </list>
+    <list default="true" id="5957bb42-d268-48e4-a3b0-14e82dc3da22" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -490,12 +487,12 @@
       <workItem from="1502166119599" duration="2657000" />
       <workItem from="1502169083093" duration="1455000" />
       <workItem from="1502171547779" duration="209000" />
-      <workItem from="1502209729746" duration="435000" />
+      <workItem from="1502209729746" duration="627000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61532000" />
+    <option name="totallyTimeSpent" value="61724000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="969" extended-state="6" />
