@@ -6,7 +6,7 @@
             {f:translate(id: 'emptyCart', package: 'NeosCommerce.Cart', source: 'NodeTypes/MiniCart')}
         </f:then>
         <f:else>
-            <a href="{linkToCart}">{f:translate(id: 'goToCart', package: 'NeosCommerce.Cart', source: 'NodeTypes/MiniCart')}</a> ({result} {f:translate(id: 'article', package: 'NeosCommerce.Cart', source: 'NodeTypes/MiniCart')}). <f:link.action action="deleteCart" controller="Cart" package="NeosCommerce.Cart" class="btn">{f:translate(id: 'deleteCartLabel', package: 'NeosCommerce.Cart', source: 'NodeTypes/MiniCart')}</f:link.action>
+            <a href="{linkToCart}">{f:translate(id: 'goToCart', package: 'NeosCommerce.Cart', source: 'NodeTypes/MiniCart')}</a> ({result} {f:translate(id: 'article', package: 'NeosCommerce.Cart', source: 'NodeTypes/MiniCart')}). 
         </f:else>
     </f:if>
 </div>
